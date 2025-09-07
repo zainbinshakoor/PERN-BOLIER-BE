@@ -32,8 +32,8 @@ A professional-grade full-stack application boilerplate Node.js (TypeScript/Expr
 
 ```bash
 # Clone the repository
-git clone https://github.com/zainbinshakoor/PERN-BOLIER-BE.git
-cd PERN-BOLIER-BE
+https://github.com/zainbinshakoor/pern-boiler-be.git
+cd pern-boiler-be
 
 # Install dependencies
 npm run install
