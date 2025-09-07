@@ -34,6 +34,30 @@ async function main() {
     },
   });
 
+  // Create sample posts
+  await prisma.post.createMany({
+    data: [
+      {
+        title: 'Welcome to the API',
+        content: 'This is a sample post created during seeding.',
+        published: true,
+        authorId: admin.id,
+      },
+      {
+        title: 'Getting Started',
+        content: 'Learn how to use this API effectively.',
+        published: true,
+        authorId: user.id,
+      },
+      {
+        title: 'Draft Post',
+        content: 'This is a draft post.',
+        published: false,
+        authorId: user.id,
+      },
+    ],
+  });
+
   console.log('Database seeded successfully!');
 }
 
