@@ -11,6 +11,8 @@ import { notFound } from './middleware/notFound';
 import logger from './utils/logger';
 import config from './config';
 
+// Import routes
+import authRoutes from './routes/auth';
 
 
 const app = express();
@@ -78,6 +80,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.get('/health', (_req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
+
+// API routes
+app.use('/api/auth', authRoutes);
 
 // 404 handler
 app.use(notFound);
